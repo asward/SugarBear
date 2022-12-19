@@ -1,0 +1,35 @@
+.debug{
+    border: 1px solid red;
+}
+:root{
+    --button-height-factor: .2;
+    --button-width-factor: .3;
+    --button-top-factor: .6;
+    --sugar-bear-width: 283px;
+    --sugar-bear-height: 608px;
+}
+
+#main {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+#sugar-bear{
+    position: absolute;
+}
+#container{
+    height: min(100%, var(--sugar-bear-height));
+    width:  min(100%, var(--sugar-bear-width));
+}
+#belly-button{
+    position: relative;
+    width:100%;
+    top: 60%;
+    height: 25%;
+    background-color: transparent;
+    border: 0px solid black;
+}
