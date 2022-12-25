@@ -4,6 +4,10 @@
 #include <ESP8266WiFi.h>          //https://github.com/esp8266/Arduino
 #endif
 
+#ifndef HOSTNAME
+#define HOSTNAME "ESP_HOST"
+#endif
+
 #include <ESPAsyncWebServer.h>     //Local WebServer used to serve the configuration portal
 #include <ESPAsyncWiFiManager.h>          //https://github.com/tzapu/WiFiManager WiFi Configuration Magic
 
@@ -12,6 +16,8 @@
 
 void SetupWiFi(){ 
     
+    WiFi.hostname(HOSTNAME);
+
     AsyncWiFiManager wifiManager(&server,&dns);
     //reset saved settings
     // wifiManager.resetSettings();
